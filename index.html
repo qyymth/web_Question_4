@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>简易像素画板 | 像素网格绘图工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="pixel-artboard">
+    <div class="canvas-container">
+        <!-- 像素网格容器 20x20 -->
+        <div class="pixel-grid" id="pixelGrid"></div>
+
+        <div class="toolbar">
+            <div class="color-picker-area">
+                <span class="color-label">🎨 画笔颜色</span>
+                <input type="color" id="colorPicker" value="#ff5252">
+            </div>
+            <button class="btn btn-clear" id="clearBtn">🗑️ 清空画板</button>
+            <button class="btn btn-save" id="saveBtn">📸 保存为 PNG</button>
+        </div>
+        <div class="info-tip">
+            💡 提示：点击任意格子填充当前颜色 | 调色盘自由选色 | 支持拖拽绘画 | 保存完整像素画
+        </div>
+        <footer>✨ 像素画板 · 创意无限</footer>
+    </div>
+</div>
+
+<!-- 隐藏的canvas元素用于导出PNG -->
+<canvas id="exportCanvas" class="hidden-canvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
